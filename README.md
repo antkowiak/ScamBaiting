@@ -20,4 +20,4 @@ Notepad - A "fake" version of notepad that only displays the text in an unreadab
 
 Tree - A "fake" replacement for c:\windows\system32\tree.com. Scammers often run "tree" from a
 command line, pretending that it is a virus scan. This replacement plays along with that,
-and prints out that there are no viruses.
+and prints an ascii art tree, and then says that there are no viruses.
