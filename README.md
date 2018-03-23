@@ -16,5 +16,8 @@ be funny to watch.
 One typical scammer approach is to open up Notepad and have the user type their credit
 card and billing information into the application.
 
-One of the tools in this repository is a "fake" version of notepad that only displays
-the text in an unreadable (Wingdings) font.
+Notepad - A "fake" version of notepad that only displays the text in an unreadable (Wingdings) font.
+
+Tree - A "fake" replacement for c:\windows\system32\tree.com. Scammers often run "tree" from a
+command line, pretending that it is a virus scan. This replacement plays along with that,
+and prints out that there are no viruses.
