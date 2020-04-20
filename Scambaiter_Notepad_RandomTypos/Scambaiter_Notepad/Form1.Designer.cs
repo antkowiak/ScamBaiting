@@ -353,6 +353,8 @@
             this.textBox1.Size = new System.Drawing.Size(780, 542);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.KeyPreview = true;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // Form1
             // 

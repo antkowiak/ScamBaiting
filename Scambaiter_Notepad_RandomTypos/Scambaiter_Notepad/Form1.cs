@@ -13,6 +13,7 @@ namespace Scambaiter_Notepad
     public partial class Form1 : Form
     {
         Random rnd = new Random();
+        bool makeTyposFlag = true;
 
         public Form1()
         {
@@ -86,12 +87,19 @@ namespace Scambaiter_Notepad
             string text = tb.Text;
 
             for (int i = 0; i < tb.Text.Length; ++i)
-                if (rnd.Next(1, 500) == 499)
+                if (rnd.Next(1, 500) == 499 && makeTyposFlag)
                     text = ReplaceAtIndex(text, i);
 
             tb.Text = text;
             tb.Select(cursorPosition, 0);
             tb.ScrollToCaret();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Control-Q key will toggle whether the typos will happen
+            if (ModifierKeys == Keys.Control && e.KeyChar == 17) // CTRL - Q
+                makeTyposFlag = !makeTyposFlag;
         }
 
         private string ReplaceAtIndex(string text, int index)
